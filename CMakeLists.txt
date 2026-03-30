@@ -14,9 +14,6 @@ else()
   enable_language(ASM)
 endif()
 
-fetch_package("github:holepunchto/libjstl")
-fetch_package("github:holepunchto/bare@1.24.3")
-
 add_bare_bundle(
   ${name}_bundle
   ENTRY src/bin/holesail.mjs
