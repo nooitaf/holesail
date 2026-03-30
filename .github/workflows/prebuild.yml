@@ -55,11 +55,11 @@ jobs:
           - os: windows-2022
             platform: win32
             arch: x64
-            flags: -D CMAKE_C_FLAGS="-Wno-incompatible-pointer-types" -D CMAKE_CXX_FLAGS="-Wno-incompatible-pointer-types"
+            flags: -D CMAKE_C_FLAGS="-Wno-incompatible-pointer-types -D_CRT_SECURE_NO_WARNINGS" -D CMAKE_CXX_FLAGS="-Wno-incompatible-pointer-types /EHsc -D_CRT_SECURE_NO_WARNINGS"
           - os: windows-2022
             platform: win32
             arch: arm64
-            flags: -D CMAKE_C_FLAGS="-Wno-incompatible-pointer-types" -D CMAKE_CXX_FLAGS="-Wno-incompatible-pointer-types"
+            flags: -D CMAKE_C_FLAGS="-Wno-incompatible-pointer-types -D_CRT_SECURE_NO_WARNINGS" -D CMAKE_CXX_FLAGS="-Wno-incompatible-pointer-types /EHsc -D_CRT_SECURE_NO_WARNINGS"
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.platform }}-${{ matrix.arch }}${{ matrix.tags }}
     steps:
