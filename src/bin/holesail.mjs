@@ -4,7 +4,7 @@ import process from 'process'
 import minimist from 'minimist' // Required to parse CLI arguments
 import goodbye from 'graceful-goodbye'
 import Holesail from '../index.js'
-import Livefiles from 'livefiles'
+import Livefiles from '../lib/Livefiles.js'
 import printHelp from '../lib/help.js'
 import { validateInput } from '../lib/validateInput.js'
 import stdout from '../lib/stdout.js'

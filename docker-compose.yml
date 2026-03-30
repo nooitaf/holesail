@@ -1,0 +1,11 @@
+services:
+  holesail-filemanager:
+    build: .
+    ports:
+      - "8989:8989"
+      - "5409:5409"
+    volumes:
+      - ./testfolder:/app/testfolder
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped

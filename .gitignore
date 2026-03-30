@@ -9,4 +9,4 @@ install
 *.bundle.h
 *.d
 prebuilds
-.DS_Store
+.DS_Storetestfolder/
